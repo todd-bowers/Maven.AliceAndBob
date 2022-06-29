@@ -6,17 +6,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args ){
-    Scanner in = new Scanner(System.in);
-    System.out.print("What is your name? ");
-    String name = in.nextLine();
+        Scanner in = new Scanner(System.in);
+        System.out.println("What is your name? ");
+        String name = in.nextLine();
 
-    switch (name) {
-        case "Alice":
-            System.out.println("Hello Alice!");
-            break;
-        case "Bob":
-            System.out.println("Hello Bob!");
-            break;
+        if (name.equalsIgnoreCase("Alice")) {
+            System.out.println("Hello, Alice!");
+        } else if (name.equalsIgnoreCase("Bob")) {
+            System.out.println("Hello, Bob!");
+        } else {
+            System.out.println("Goodbye");
+        }
     }
-    }
-    }
+}
